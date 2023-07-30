@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phishing Detection</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	<style>
+		/* Add your CSS styles here */
+	</style>
+</head>
+<body>
+	<h1>Phishing And Network Intrution Detection System</h1>
+	<form action="{{url_for('predict')}}" method="post">
+		<label for="url">Enter URL:</label>
+		<input type="text" id="url" name="url" required>
+		<button type="submit">Check</button>
+	</form>
+	<h2>
+	{{ prediction_text }}
+    </h2>
+</body>
+</html>
